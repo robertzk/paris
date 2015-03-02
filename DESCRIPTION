@@ -1,0 +1,9 @@
+Package: syntaxr
+Title: R tools for navigating the R syntax tree
+Version: 0.1
+Authors@R: "Peter Hurford <peter@peterhurford.com> [aut, cre]"
+Description: R tools for navigating the R syntax tree
+Depends:
+    R (>= 3.0.1)
+License: MIT
+LazyData: true
