@@ -1,5 +1,5 @@
 #' R tools for navigating the R syntax tree
 #'
-#' @name syntaxr
+#' @name paris
 #' @docType package
 NULL

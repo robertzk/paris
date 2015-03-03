@@ -1,4 +1,4 @@
-Package: syntaxr
+Package: paris
 Title: R tools for navigating the R syntax tree
 Version: 0.1
 Authors@R: "Peter Hurford <peter@peterhurford.com> [aut, cre]"
