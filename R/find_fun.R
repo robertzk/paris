@@ -15,7 +15,7 @@ find_fun <- function(fun) {
   }
 
   fun_where <- fun %>% pryr::where()
-  base <- pryr::where('mean')
-  if (identical(fun_where, base)) { return('base') }
+  if (identical(fun_where, pryr::where('mean'))) { return('base') }
+  if (identical(fun_where, pryr::where('find_fun'))) { return('paris') }
   fun_where %>% attr(., 'name') %>% strsplit(., ':') %>% .[[1]] %>% .[[2]]
 }
