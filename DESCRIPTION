@@ -6,7 +6,7 @@ Description: R tools for navigating the R syntax tree
 Depends:
     R (>= 3.0.1)
 Suggests:
-    pryr
+    pryr,
     magrittr
 License: MIT
 LazyData: true
