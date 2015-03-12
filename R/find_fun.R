@@ -7,9 +7,15 @@
 #' @param fun function or character. The function to find the name of the package for.
 #' @export
 find_fun <- function(fun) {
-  if (!is.character(fun)) fun <- deparse(substitute(fun))
+  if (is.character(fun)) eval(parse(text = fun))  # Make sure function exists.
+  else fun <- deparse(substitute(fun))
+
   for(char in c('/', ':::', '::')) {
     if (grepl(char, fun)) return(strsplit(fun, char)[[1]][[1]])
   }
-  fun %>% pryr::where() %>% attr(., 'name') %>% strsplit(., ':') %>% .[[1]] %>% .[[2]]
+
+  fun_where <- fun %>% pryr::where()
+  base <- pryr::where('mean')
+  if (identical(fun_where, base)) { return('base') }
+  fun_where %>% attr(., 'name') %>% strsplit(., ':') %>% .[[1]] %>% .[[2]]
 }
