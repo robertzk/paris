@@ -11,5 +11,5 @@ find_fun <- function(fun) {
   for(char in c('/', ':::', '::')) {
     if (grepl(char, fun)) return(strsplit(fun, char)[[1]][[1]])
   }
-  fun %>% pryr::where(.) %>% attr(., 'name') %>% strsplit(., ':') %>% .[[1]] %>% .[[2]]
+  fun %>% pryr::where() %>% attr(., 'name') %>% strsplit(., ':') %>% .[[1]] %>% .[[2]]
 }
