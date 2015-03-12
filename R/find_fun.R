@@ -7,7 +7,7 @@
 #' @param fun function or character. The function to find the name of the package for.
 #' @export
 find_fun <- function(fun) {
-  if (is.character(fun)) eval(parse(text = fun))  # Make sure function exists.
+  if (is.character(fun)) eval(parse(text = fun), env = globalenv())  # Make sure function exists.
   else fun <- deparse(substitute(fun))
 
   for(char in c('/', ':::', '::')) {
