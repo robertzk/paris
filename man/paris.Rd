@@ -4,8 +4,8 @@
 \name{paris}
 \alias{paris}
 \alias{paris-package}
-\title{R tools for navigating the R syntax tree}
+\title{R tools for navigating the R syntax tree.}
 \description{
-R tools for navigating the R syntax tree
+R tools for navigating the R syntax tree.
 }
 
